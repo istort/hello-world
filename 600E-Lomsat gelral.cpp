@@ -15,7 +15,7 @@ LL ans[MAXN];
 void dfs(int u, int fa)
 {
 	for(int i = 0; i < G[u].size(); i++)
-    {
+ 	{
 		int v = G[u][i];
 		if (v == fa)
             continue;
@@ -28,8 +28,8 @@ void dfs(int u, int fa)
 		}
 		map<int, int> :: iterator it;
 		for(it = cnt[v].begin(); it != cnt[v].end(); it++)// 儿子的 <颜色值，个数>
-        {
-            // sum【和儿子颜色相同的个数】  -= 颜色值
+    	{
+          		  // sum【和儿子颜色相同的个数】  -= 颜色值
 			sumv[u][cnt[u][it->first]] -= it->first;
 			cnt[u][it->first] += it->second; // 父亲和孩子 相同的颜色的个数相加
 			sumv[u][cnt[u][it->first]] += it->first;
