@@ -1,2 +1,2 @@
 # hello-world
-It's my first app
+I will use it to study.
